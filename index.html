@@ -1,1 +1,400 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Privacy Policy - Echo: Life Tracker</title><style>body{font-family:sans-serif;line-height:1.6;color:#333;max-width:800px;margin:0 auto;padding:20px;}h1{color:#000000;border-bottom:2px solid #e8eaed;padding-bottom:10px;}h2{color:#202124;margin-top:30px;}p,li{color:#3c4043;}.contact-box{background:#f8f9fa;border-left:4px solid #000000;padding:15px;margin-top:20px;}</style></head><body><h1>Privacy Policy for Echo: Life Tracker</h1><p><em>Last updated: October 3, 2026</em></p><p>Welcome to <strong>Echo: Life Tracker</strong>. Your privacy is critically important to us. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application and services.</p><h2>1. Information We Collect</h2><ul><li><strong>Account Information:</strong> When you register or log in (via Firebase Authentication), we collect basic user info such as your email address and profile identifiers.</li><li><strong>User-Generated Content:</strong> Tasks, notes, and goals created within the app are stored locally on your device (using Room database) and optionally synced to Firestore cloud storage.</li><li><strong>Usage & Diagnostic Data:</strong> We use Firebase Crashlytics to collect crash reports and performance data to improve application stability.</li></ul><h2>2. Accessibility Service Disclosure</h2><p><strong>Echo: Life Tracker</strong> uses Android Accessibility Services to assist users with automated task management and productivity features. Specifically:</p><ul><li>The Accessibility Service is used solely to detect app launch context and assist in automating user-defined tasks.</li><li>We <strong>DO NOT</strong> collect, store, transmit, or share any personal data, text typed, screen content, or sensitive credentials accessed via the Accessibility Service.</li><li>Using this service is strictly voluntary and requires explicit user consent within the app settings.</li></ul><h2>3. How We Use Your Information</h2><ul><li>Provide, operate, and maintain the Echo application.</li><li>Synchronize your tasks, goals, and notes across authorized devices.</li><li>Fix bugs, crashes, and technical issues.</li></ul><h2>4. Data Deletion & Account Erasure</h2><p>You can delete your account at any time directly inside the app under <strong>Profile Screen &gt; Delete Account</strong>. Deleting your account immediately and permanently removes all your personal data from Firebase Authentication, Firestore, and your local device storage.</p><h2>5. Third-Party Services</h2><ul><li><strong>Google Firebase (Auth, Firestore, Crashlytics):</strong> For authentication, cloud database, and crash logging.</li><li><strong>Google Play Billing:</strong> For secure in-app purchases.</li></ul><h2>6. Contact Us</h2><div class="contact-box"><p>If you have any questions or concerns about this Privacy Policy, please contact us at:</p><p><strong>Developer Email:</strong> echolifetracker@gmail.com</p></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy â€” Echo Life Tracker</title>
+  <meta name="description" content="Privacy Policy for Echo Life Tracker Android app by Aakash Patel."/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
+      background: #07090C;
+      color: #C8D0D8;
+      line-height: 1.75;
+      min-height: 100vh;
+    }
+
+    /* HEADER */
+    header {
+      background: linear-gradient(135deg, #0A1628 0%, #0D1F3C 50%, #0A1628 100%);
+      border-bottom: 1px solid #1A2E4A;
+      padding: 48px 24px 40px;
+      text-align: center;
+    }
+
+    .logo-ring {
+      width: 72px; height: 72px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #0099FF, #7B5FFF);
+      display: inline-flex; align-items: center; justify-content: center;
+      margin-bottom: 18px;
+      box-shadow: 0 0 32px rgba(0,153,255,0.4);
+    }
+
+    .logo-ring span { 
+      font-size: 32px; 
+      font-weight: 800; 
+      color: #FFFFFF; 
+    }
+
+    header h1 {
+      font-size: clamp(22px, 5vw, 32px);
+      font-weight: 800;
+      color: #F0F4F8;
+      letter-spacing: -0.5px;
+    }
+
+    header p {
+      margin-top: 8px;
+      color: #8C9AA6;
+      font-size: 14px;
+    }
+
+    .badge {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 4px 14px;
+      background: rgba(0,153,255,0.12);
+      border: 1px solid rgba(0,153,255,0.35);
+      border-radius: 20px;
+      color: #0099FF;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    /* MAIN */
+    main {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* SECTION */
+    section {
+      background: #0E1419;
+      border: 1px solid #1C2730;
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin-bottom: 24px;
+      transition: border-color 0.2s;
+    }
+
+    section:hover { border-color: #274060; }
+
+    section h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #E8EDF2;
+      margin-bottom: 14px;
+    }
+
+    section p {
+      color: #8C9AA6;
+      font-size: 15px;
+      margin-bottom: 12px;
+    }
+
+    section p:last-child { margin-bottom: 0; }
+
+    ul, ol {
+      padding-left: 20px;
+      color: #8C9AA6;
+      font-size: 15px;
+    }
+
+    li { margin-bottom: 6px; }
+
+    /* HIGHLIGHT BOX */
+    .highlight {
+      background: rgba(0,153,255,0.06);
+      border-left: 3px solid #0099FF;
+      border-radius: 0 8px 8px 0;
+      padding: 12px 16px;
+      margin: 14px 0 0;
+      font-size: 14px;
+      color: #A0B0C0;
+    }
+
+    .highlight-blue {
+      background: rgba(0,153,255,0.08);
+      border-left: 3px solid #0099FF;
+      border-radius: 0 8px 8px 0;
+      padding: 12px 16px;
+      margin-top: 14px;
+      font-size: 14px;
+      color: #7BB8E8;
+    }
+
+    /* CONTACT CARD */
+    .contact-card {
+      background: linear-gradient(135deg, #0D1F3C, #0A1628);
+      border: 1px solid #1E3A5F;
+      border-radius: 16px;
+      padding: 32px;
+      text-align: center;
+      margin-top: 36px;
+    }
+
+    .contact-card h2 {
+      color: #F0F4F8;
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .contact-card p {
+      color: #8C9AA6;
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+
+    .email-link {
+      display: inline-block;
+      padding: 10px 24px;
+      background: #0099FF;
+      color: #FFFFFF;
+      font-weight: 600;
+      font-size: 14px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .email-link:hover { background: #0080D6; }
+
+    .meta {
+      margin-top: 32px;
+      text-align: center;
+      color: #4A5568;
+      font-size: 12px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px;
+      border-top: 1px solid #1C2730;
+      color: #4A5568;
+      font-size: 13px;
+    }
+
+    @media (max-width: 600px) {
+      section { padding: 20px 18px; }
+      main { padding: 28px 16px 60px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="logo-ring"><span>E</span></div>
+  <h1>Echo Life Tracker</h1>
+  <p>Privacy Policy</p>
+  <div class="badge">GDPR & Google Play Compliant</div>
+</header>
+
+<!-- MAIN -->
+<main>
+
+  <!-- 1. Overview -->
+  <section>
+    <h2>1. Overview</h2>
+    <p>
+      Echo Life Tracker ("Echo", "the app", "we") is developed by <strong style="color:#C8D0D8">Aakash Patel</strong>, based in <strong style="color:#C8D0D8">Lucknow, Uttar Pradesh, India</strong>.
+      This Privacy Policy explains what information Echo collects, how it is used, and your rights as a user.
+    </p>
+    <p>
+      By using Echo, you agree to the collection and use of information as described in this policy.
+      If you do not agree, please do not use the app.
+    </p>
+    <p><strong style="color:#C8D0D8">Effective Date:</strong> October 7, 2026 &nbsp;|&nbsp;
+       <strong style="color:#C8D0D8">Last Updated:</strong> October 7, 2026</p>
+  </section>
+
+  <!-- 2. Data Collected -->
+  <section>
+    <h2>2. Information We Collect</h2>
+
+    <p><strong style="color:#C8D0D8">Account Data (via Firebase Authentication):</strong></p>
+    <ul>
+      <li>Your email address and display name (when you sign up or sign in with Google)</li>
+      <li>A unique user ID (UID) generated by Firebase</li>
+    </ul>
+
+    <p style="margin-top:14px"><strong style="color:#C8D0D8">App Content (via Cloud Firestore):</strong></p>
+    <ul>
+      <li>Tasks, goals, milestones, notes, and habit records you create in the app</li>
+      <li>Focus session schedules and completion data</li>
+      <li>Subscription status (whether you are an Echo Pro member)</li>
+    </ul>
+
+    <p style="margin-top:14px"><strong style="color:#C8D0D8">Device Data (local only):</strong></p>
+    <ul>
+      <li>App data stored locally on your device using Room SQLite database</li>
+      <li>Notification alarm schedules</li>
+    </ul>
+
+    <div class="highlight">
+      We do NOT collect: location data, contacts, call logs, SMS, photos, or any financial information.
+    </div>
+  </section>
+
+  <!-- 3. Focus Lock Permissions -->
+  <section>
+    <h2>3. Focus Lock â€” Usage Access & Overlay Permissions</h2>
+    <p>
+      Echo's <strong style="color:#C8D0D8">Focus Lock</strong> feature optionally uses Android's <strong style="color:#C8D0D8">Usage Access (PACKAGE_USAGE_STATS)</strong> and <strong style="color:#C8D0D8">Display Over Other Apps (SYSTEM_ALERT_WINDOW)</strong>
+      to help you beat distractions by detecting when an app you chose to block is opened during a scheduled Focus session.
+    </p>
+    <ul>
+      <li><strong>What is accessed:</strong> The foreground app's package name only (e.g. <code style="color:#0099FF">com.example.socialapp</code>) during active focus sessions</li>
+      <li><strong>What is NOT accessed:</strong> Keystrokes, passwords, screen content, personal messages, or any personal data</li>
+      <li><strong>Data storage:</strong> This data is <strong>never stored, never transmitted, never shared</strong> â€” it is processed locally in real-time on-device only</li>
+      <li><strong>When it runs:</strong> Only during active Focus sessions that you explicitly schedule and start</li>
+      <li><strong>How to disable:</strong> System Settings -> Apps -> Special app access -> Usage access -> Echo: Life Tracker -> Turn OFF</li>
+    </ul>
+    <div class="highlight-blue">
+      Usage Access and Overlay permissions are used solely and exclusively for the Focus Lock self-control feature. No data is collected or transmitted through these permissions.
+    </div>
+  </section>
+
+  <!-- 4. Subscriptions -->
+  <section>
+    <h2>4. Subscriptions & Payments</h2>
+    <p>
+      Echo Pro subscriptions are processed exclusively through <strong style="color:#C8D0D8">Google Play Billing</strong>.
+    </p>
+    <ul>
+      <li>All payment processing is handled by Google Play â€” Echo does not handle, store, or see your payment card details</li>
+      <li>A subscription status flag (isPro: true/false) is stored in your Firestore account</li>
+      <li>You can cancel your subscription anytime via Google Play -> Subscriptions</li>
+    </ul>
+    <div class="highlight">
+      Echo never handles payment card numbers, bank details, or any financial information.
+    </div>
+  </section>
+
+  <!-- 5. How we use data -->
+  <section>
+    <h2>5. How We Use Your Information</h2>
+    <ul>
+      <li>To sync your tasks, goals, and notes across devices via Firestore</li>
+      <li>To authenticate your account and maintain your session</li>
+      <li>To enforce Focus Lock sessions you have scheduled</li>
+      <li>To send you reminder notifications for tasks and goals you create</li>
+      <li>To verify your Echo Pro subscription status</li>
+    </ul>
+    <p style="margin-top:12px">
+      We do <strong style="color:#C8D0D8">not</strong> use your data for advertising, profiling, or sell it to any third party.
+    </p>
+  </section>
+
+  <!-- 6. Third Parties -->
+  <section>
+    <h2>6. Third-Party Services</h2>
+    <p>Echo uses the following third-party services, each governed by their own privacy policies:</p>
+    <ul>
+      <li><strong>Firebase Authentication</strong> â€” <a href="https://firebase.google.com/support/privacy" style="color:#0099FF">firebase.google.com/support/privacy</a></li>
+      <li><strong>Cloud Firestore</strong> â€” <a href="https://firebase.google.com/support/privacy" style="color:#0099FF">firebase.google.com/support/privacy</a></li>
+      <li><strong>Firebase Crashlytics</strong> â€” crash reports (device model, OS version, stack traces â€” no personal data)</li>
+      <li><strong>Google Play Billing</strong> â€” <a href="https://play.google.com/about/play-terms/" style="color:#0099FF">play.google.com/about/play-terms</a></li>
+    </ul>
+  </section>
+
+  <!-- 7. Data Retention & Deletion -->
+  <section id="account-deletion">
+    <h2>7. Data Retention & Account Deletion</h2>
+    <p>You have the right to delete your account and all associated data at any time. Google Play requires us to provide both an <strong style="color:#C8D0D8">in-app</strong> and a <strong style="color:#C8D0D8">web-based</strong> way to request deletion.</p>
+    
+    <div style="background:#0F1A24;border:1px solid #1E3A52;border-radius:12px;padding:20px 24px;margin:16px 0;">
+      <h3 style="color:#0099FF;font-size:16px;margin-bottom:12px;">Option 1 â€” Delete from Inside the App</h3>
+      <ol style="margin-left:18px;line-height:2.2;">
+        <li>Open <strong style="color:#C8D0D8">Echo: Life Tracker</strong></li>
+        <li>Tap <strong style="color:#C8D0D8">Profile</strong> (bottom navigation)</li>
+        <li>Scroll down and tap <strong style="color:#C8D0D8">Delete Account</strong></li>
+        <li>Confirm deletion in the dialog</li>
+      </ol>
+      <p style="margin-top:10px;color:#8C9AA6;font-size:13px;">Immediate â€” your Firebase account, all tasks, goals, notes, journey snapshots, and subscription records are permanently erased.</p>
+    </div>
+
+    <div style="background:#150A0A;border:2px solid #FF4444;border-radius:12px;padding:20px 24px;margin:16px 0;">
+      <h3 style="color:#FF6B6B;font-size:16px;margin-bottom:12px;">Option 2 â€” Web / Email Deletion Request</h3>
+      <p>If you cannot access the app, send a deletion request to:</p>
+      <a href="mailto:echolifetracker@gmail.com?subject=Account%20Deletion%20Request&amp;body=Please%20delete%20my%20Echo%20account%20and%20all%20data.%0ARegistered%20Email%3A%20%5Byour-email%5D" style="display:inline-block;margin-top:10px;padding:12px 22px;background:#FF4444;color:#fff;border-radius:8px;text-decoration:none;font-weight:700;font-size:14px;">echolifetracker@gmail.com</a>
+      <p style="margin-top:14px;color:#8C9AA6;font-size:13px;">Include your registered email address in the request. We will process and confirm deletion within <strong style="color:#C8D0D8">30 days</strong>.</p>
+    </div>
+
+    <h3 style="color:#C8D0D8;font-size:15px;margin:16px 0 8px;">What gets deleted:</h3>
+    <ul>
+      <li>Firebase Authentication account</li>
+      <li>All Firestore data: tasks, goals, habits, notes, milestones, journey snapshots</li>
+      <li>Subscription status and purchase records</li>
+      <li>All local device data (SharedPreferences, Room database)</li>
+    </ul>
+    <p style="margin-top:12px;color:#8C9AA6;font-size:13px;">Deletion is permanent and cannot be undone. Cancel your subscription separately via <a href="https://play.google.com/store/account/subscriptions" style="color:#0099FF">Google Play -> Subscriptions</a>.</p>
+  </section>
+
+  <!-- 8. Children -->
+  <section>
+    <h2>8. Children's Privacy</h2>
+    <p>
+      Echo Life Tracker is designed for users aged 13 and older.
+      We do not knowingly collect personal data from children under 13.
+      If you believe a child under 13 has provided us personal information, please contact us and we will delete it immediately.
+    </p>
+  </section>
+
+  <!-- 9. Security -->
+  <section>
+    <h2>9. Security</h2>
+    <p>
+      We use Firebase's industry-standard security infrastructure to protect your data.
+      All data is transmitted over HTTPS/TLS encryption. Firebase Firestore security rules
+      ensure that only you can access your own data.
+    </p>
+    <p>
+      However, no method of transmission over the internet is 100% secure.
+      We strive to use commercially acceptable means to protect your personal information.
+    </p>
+  </section>
+
+  <!-- 10. Changes -->
+  <section>
+    <h2>10. Changes to This Policy</h2>
+    <p>
+      We may update this Privacy Policy from time to time.
+      Any changes will be posted on this page with an updated "Last Updated" date.
+      We encourage you to review this policy periodically.
+      Continued use of Echo after changes constitutes acceptance of the updated policy.
+    </p>
+  </section>
+
+  <!-- Contact -->
+  <div class="contact-card">
+    <h2>Contact Us & Grievance Officer</h2>
+    <p>If you have questions about this Privacy Policy, your data, or wish to exercise your rights under the Digital Personal Data Protection Act, contact:</p>
+    <p style="margin-top:10px; color:#E8EDF2;"><strong>Developer & Grievance Officer:</strong> Aakash Patel</p>
+    <p style="color:#A0AEC0;"><strong>Location:</strong> Lucknow, Uttar Pradesh, India</p>
+    <div style="margin-top:12px;">
+      <a href="mailto:echolifetracker@gmail.com" class="email-link">echolifetracker@gmail.com</a>
+    </div>
+    <p style="margin-top:16px; font-size:13px; color:#8C9AA6;">
+      Account deletion can be done directly inside the app (Profile -> Delete Account) or via email request. We respond within 30 days.
+    </p>
+  </div>
+
+  <p class="meta">
+    (C) 2026 Aakash Patel - Echo Life Tracker - All rights reserved
+  </p>
+
+</main>
+
+<footer>
+  Echo Life Tracker Privacy Policy &nbsp;|&nbsp; Last updated: October 7, 2026
+</footer>
+
+</body>
+</html>
