@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Privacy Policy - Echo Life Tracker</title>
-  <meta name="description" content="Privacy Policy for Echo Life Tracker Android app by Aakash Patel."/>
+  <meta name="description" content="Privacy Policy for Echo Life Tracker Android application by Aakash Patel."/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -51,21 +51,8 @@
       font-size: 14px;
     }
 
-    .badge {
-      display: inline-block;
-      margin-top: 14px;
-      padding: 4px 14px;
-      background: rgba(0,153,255,0.12);
-      border: 1px solid rgba(0,153,255,0.35);
-      border-radius: 20px;
-      color: #0099FF;
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-    }
-
     main {
-      max-width: 780px;
+      max-width: 800px;
       margin: 0 auto;
       padding: 48px 24px 80px;
     }
@@ -82,10 +69,18 @@
     section:hover { border-color: #274060; }
 
     section h2 {
-      font-size: 18px;
+      font-size: 19px;
       font-weight: 700;
       color: #E8EDF2;
       margin-bottom: 14px;
+    }
+
+    section h3 {
+      font-size: 15px;
+      font-weight: 600;
+      color: #7BB8E8;
+      margin-top: 16px;
+      margin-bottom: 8px;
     }
 
     section p {
@@ -97,31 +92,42 @@
     section p:last-child { margin-bottom: 0; }
 
     ul, ol {
-      padding-left: 20px;
+      padding-left: 22px;
       color: #8C9AA6;
       font-size: 15px;
     }
 
-    li { margin-bottom: 6px; }
+    li { margin-bottom: 8px; }
+
+    strong { color: #D2DCE6; }
+
+    code {
+      background: rgba(0, 153, 255, 0.12);
+      color: #40B0FF;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 13px;
+    }
 
     .highlight {
       background: rgba(0,153,255,0.06);
       border-left: 3px solid #0099FF;
       border-radius: 0 8px 8px 0;
-      padding: 12px 16px;
-      margin: 14px 0 0;
+      padding: 14px 18px;
+      margin: 14px 0;
       font-size: 14px;
       color: #A0B0C0;
     }
 
-    .highlight-blue {
-      background: rgba(0,153,255,0.08);
-      border-left: 3px solid #0099FF;
+    .highlight-green {
+      background: rgba(34,197,94,0.08);
+      border-left: 3px solid #22C55E;
       border-radius: 0 8px 8px 0;
-      padding: 12px 16px;
-      margin-top: 14px;
+      padding: 14px 18px;
+      margin: 14px 0;
       font-size: 14px;
-      color: #7BB8E8;
+      color: #86EFAC;
     }
 
     .contact-card {
@@ -187,175 +193,228 @@
   <div class="logo-ring"><span>E</span></div>
   <h1>Echo Life Tracker</h1>
   <p>Privacy Policy</p>
-  <div class="badge">Google Play Compliant</div>
 </header>
 
 <main>
 
   <section>
-    <h2>Overview</h2>
+    <h2>1. Overview and Developer Information</h2>
     <p>
-      Echo Life Tracker is developed by <strong style="color:#C8D0D8">Aakash Patel</strong>, located in <strong style="color:#C8D0D8">Lucknow, Uttar Pradesh, India</strong>.
-      This Privacy Policy explains what information Echo collects, how it is used, and your rights as a user.
+      Echo: Life Tracker (package name: <code>com.echolifetracker.app</code>) is developed and operated by <strong>Aakash Patel</strong>, located in <strong>Lucknow, Uttar Pradesh, India</strong>.
     </p>
     <p>
-      By using Echo, you agree to the collection and use of information as described in this policy.
-      If you do not agree, please do not use the application.
+      This Privacy Policy describes how personal information is collected, used, protected, and handled when you use the Echo mobile application. We are committed to transparency, data minimization, and user privacy.
     </p>
-    <p><strong style="color:#C8D0D8">Effective Date:</strong> October 7, 2026 &nbsp;|&nbsp;
-       <strong style="color:#C8D0D8">Last Updated:</strong> October 7, 2026</p>
+    <p>
+      <strong>Effective Date:</strong> October 7, 2026 &nbsp;|&nbsp;
+      <strong>Last Updated:</strong> October 7, 2026
+    </p>
   </section>
 
   <section>
-    <h2>Information We Collect</h2>
+    <h2>2. Information We Collect</h2>
 
-    <p><strong style="color:#C8D0D8">Account Information:</strong></p>
+    <h3>Account Information (User-Provided):</h3>
     <ul>
-      <li>Your email address and name when signing in</li>
-      <li>A unique identifier for secure account management</li>
+      <li><strong>Email address and Name / Display Name:</strong> Collected when you create an account or sign in using Firebase Authentication.</li>
+      <li><strong>User Identifier (UID):</strong> A unique pseudonymous account ID assigned by Firebase to authenticate and associate your productivity records with your private account.</li>
     </ul>
 
-    <p style="margin-top:14px"><strong style="color:#C8D0D8">App Content:</strong></p>
+    <h3>Personal Productivity Content (User-Generated):</h3>
     <ul>
-      <li>Tasks, goals, milestones, notes, and habits created in the app</li>
-      <li>Focus session schedules and progress statistics</li>
-      <li>Subscription status to activate Echo Pro features</li>
+      <li>Tasks, routines, recurring goals, milestones, notes, drawings, priority levels, and category labels created by you.</li>
+      <li>User-scheduled focus session durations and self-reflection progress entries.</li>
+      <li>Echo Pro entitlement status to unlock premium features.</li>
     </ul>
 
-    <p style="margin-top:14px"><strong style="color:#C8D0D8">Device Data:</strong></p>
+    <h3>Device Diagnostics & Crash Logs (Automatically Collected):</h3>
     <ul>
-      <li>Locally cached user data for fast offline access</li>
-      <li>Scheduled reminder alarms</li>
+      <li><strong>Diagnostics:</strong> Crash logs, stack traces, device model, Android OS version, and app performance metrics collected via <strong>Firebase Crashlytics</strong> to diagnose unexpected crashes, fix bugs, and maintain app stability.</li>
+      <li><strong>Installation ID:</strong> An app-specific installation identifier generated by Firebase strictly for crash analytics and notification dispatch.</li>
     </ul>
 
     <div class="highlight">
-      We do not collect location data, contacts, phone calls, text messages, photos, or personal files.
+      <strong>Data We Never Collect:</strong> We do NOT collect GPS location, contacts, address book, phone records, SMS/text messages, camera feeds, microphone audio, photo library files, or Google Advertising IDs (AAID).
     </div>
   </section>
 
   <section>
-    <h2>Focus Lock and App Blocking Permissions</h2>
+    <h2>3. Focus Lock Permissions & Sensitive Access</h2>
     <p>
-      Echo includes an optional <strong style="color:#C8D0D8">Focus Lock</strong> feature to help you avoid digital distractions by preventing access to designated apps during scheduled focus sessions.
+      Echo provides an optional self-discipline tool named <strong>Focus Lock</strong> that enables you to block access to apps you designate as distracting during scheduled focus sessions. To deliver this on Android, the app requests the following specific permissions:
     </p>
+
     <ul>
-      <li><strong>What is checked:</strong> Only whether a chosen blocked application is opened while an active focus session is running.</li>
-      <li><strong>What is never accessed:</strong> Keystrokes, passwords, screen text, messages, personal conversations, or browsing history.</li>
-      <li><strong>Privacy safeguard:</strong> App checking runs locally on your device in real time. It is never uploaded, never saved to servers, and never shared.</li>
-      <li><strong>Control:</strong> You decide which apps to block and can turn this feature on or off at any time in Android settings.</li>
+      <li>
+        <strong>Usage Access (<code>PACKAGE_USAGE_STATS</code>):</strong>
+        <br/>Used solely to determine the package name of the active foreground application in real-time. Echo checks only whether a user-selected blocked application is running while an active Focus Lock session is in progress.
+      </li>
+      <li>
+        <strong>Display Over Other Apps (<code>SYSTEM_ALERT_WINDOW</code>):</strong>
+        <br/>Used solely to draw the full-screen blocking overlay above a designated blocked app to prevent distraction and redirect you to your focus goal.
+      </li>
+      <li>
+        <strong>Foreground Service (<code>FOREGROUND_SERVICE_SPECIAL_USE</code>):</strong>
+        <br/>Category / Subtype: <em>Enforce focus sessions by blocking distracting apps</em>. Used strictly to ensure reliable session timing and active overlay triggering throughout your user-initiated focus window.
+      </li>
     </ul>
-    <div class="highlight-blue">
-      Focus Lock permissions are used strictly to enforce self-selected focus timers on your device. No data is collected through these permissions.
+
+    <div class="highlight-green">
+      <strong>Explicit Clarification on Accessibility Service:</strong>
+      <br/>Echo: Life Tracker <strong>DOES NOT use the Android Accessibility Service API (<code>AccessibilityService</code>)</strong>. Focus Lock relies strictly on standard Android UsageStatsManager and System Alert Window.
     </div>
+
+    <ul>
+      <li><strong>No Content Inspection:</strong> Focus Lock never reads, records, or transmits screen content, text, keystrokes, personal messages, web history, or account credentials.</li>
+      <li><strong>Local Operation:</strong> Foreground app evaluation runs entirely locally on your device in real-time; no log of your app activity is transmitted to or stored on our servers.</li>
+      <li><strong>Full User Control:</strong> Focus Lock is completely optional. You can grant, deny, or revoke these permissions at any time via Android System Settings without affecting core task or note-taking features.</li>
+    </ul>
   </section>
 
   <section>
-    <h2>Subscriptions and Payments</h2>
+    <h2>4. Exact Alarm Permission (SCHEDULE_EXACT_ALARM / USE_EXACT_ALARM)</h2>
     <p>
-      Echo Pro subscriptions are handled securely through <strong style="color:#C8D0D8">Google Play Billing</strong>.
+      Echo utilizes Android's exact alarm permissions strictly for user-configured productivity schedules:
     </p>
     <ul>
-      <li>All transactions are processed directly by Google Play. Echo never receives or stores payment cards, bank details, or financial accounts.</li>
-      <li>Your subscription status is stored to grant access to premium features.</li>
-      <li>You can manage or cancel your subscription at any time through Google Play Store under Subscriptions.</li>
+      <li>Triggering deadline notifications at the specific date and time selected by you.</li>
+      <li>Sounding critical alarms for recurring daily/weekly goals.</li>
+      <li>Accurately starting and ending user-scheduled Focus Lock windows.</li>
     </ul>
-    <div class="highlight">
-      Echo does not handle payment card numbers, banking passwords, or payment credentials.
-    </div>
-  </section>
-
-  <section>
-    <h2>How We Use Information</h2>
-    <ul>
-      <li>To save and sync your tasks, goals, and notes across your devices</li>
-      <li>To authenticate your account and keep your data secure</li>
-      <li>To enforce focus timers and app blocking when requested by you</li>
-      <li>To deliver notifications for scheduled reminders and deadlines</li>
-      <li>To maintain your Echo Pro subscription status</li>
-    </ul>
-    <p style="margin-top:12px">
-      We do <strong style="color:#C8D0D8">not</strong> sell your data, use your personal data for advertising, or share it with data brokers.
+    <p>
+      This permission is not used for promotional messages, background tracking, or advertising.
     </p>
   </section>
 
   <section>
-    <h2>Third-Party Services</h2>
-    <p>Echo works with trusted infrastructure providers to deliver its services:</p>
+    <h2>5. How We Use Your Information</h2>
+    <p>We process collected data exclusively for legitimate operational purposes:</p>
     <ul>
-      <li><strong>Google Firebase Authentication:</strong> Secure user sign-in and account verification</li>
-      <li><strong>Google Cloud Firestore:</strong> Encrypted cloud storage for your productivity data</li>
-      <li><strong>Firebase Crashlytics:</strong> Anonymous diagnostic reports to fix app crashes and improve stability</li>
-      <li><strong>Google Play Billing:</strong> Secure subscription management and payment processing</li>
+      <li>To save, organize, and synchronize your tasks, goals, and notes across your devices.</li>
+      <li>To authenticate your user account securely via Firebase Auth.</li>
+      <li>To enforce focus timers and display blocking overlays upon your request.</li>
+      <li>To send local reminder notifications and alarm prompts for scheduled tasks.</li>
+      <li>To diagnose crashes and improve application performance via Firebase Crashlytics.</li>
+      <li>To verify and maintain your Echo Pro subscription status.</li>
+    </ul>
+    <p>
+      <strong>No Selling or Advertising:</strong> We do NOT sell, rent, monetize, or trade your personal data. Echo contains zero third-party advertisements and does not engage in behavioral profiling.
+    </p>
+  </section>
+
+  <section>
+    <h2>6. Third-Party Service Providers</h2>
+    <p>Echo integrates with trusted infrastructure partners to provide secure services:</p>
+    <ul>
+      <li><strong>Google Firebase Authentication:</strong> User registration, login, and secure token verification.</li>
+      <li><strong>Google Cloud Firestore:</strong> Encrypted cloud storage for your account profile, tasks, goals, and notes.</li>
+      <li><strong>Google Firebase Crashlytics:</strong> Diagnostic crash logging and performance monitoring to debug errors.</li>
+      <li><strong>Google Play Billing:</strong> Subscription management. All financial payments are handled directly by Google Play; Echo never collects or stores credit cards, bank accounts, or billing information.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>7. Data Storage, Security & Access Rules</h2>
+    <ul>
+      <li><strong>Encryption in Transit:</strong> All communications between Echo and cloud databases are encrypted end-to-end using modern HTTPS/TLS protocols.</li>
+      <li><strong>Strict Firestore Access Rules:</strong> Server-side security rules strictly restrict database read and write permissions: only the verified authenticated user (matching the authenticated <code>request.auth.uid</code>) can access or modify their personal records. No other user can view your data.</li>
+      <li><strong>Local Storage:</strong> On-device data is stored safely in a private SQLite Room database protected by standard Android application sandboxing.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>8. Data Retention</h2>
+    <p>
+      We retain your personal productivity data (tasks, habits, goals, notes) only for as long as your account remains active and registered.
+    </p>
+    <ul>
+      <li><strong>Active Account:</strong> Data remains stored to enable multi-device sync until you delete individual items or delete your account.</li>
+      <li><strong>Upon Account Deletion:</strong> All user records, notes, goals, tasks, and cloud backups are permanently purged from Google Firestore servers immediately upon account deletion.</li>
+      <li><strong>Crash Logs:</strong> Diagnostic reports and crash traces stored in Firebase Crashlytics are automatically deleted within 90 days.</li>
+      <li><strong>Local Data:</strong> Local device storage can be erased immediately by uninstalling the app or clearing application data in Android Settings.</li>
     </ul>
   </section>
 
   <section id="account-deletion">
-    <h2>Account and Data Deletion</h2>
-    <p>You have full ownership of your data and can delete your account and records at any time through two methods:</p>
+    <h2>9. Account and Data Deletion</h2>
+    <p>You have full ownership of your data and can permanently delete your account and all associated records anytime through two methods:</p>
     
     <div style="background:#0F1A24;border:1px solid #1E3A52;border-radius:12px;padding:20px 24px;margin:16px 0;">
-      <h3 style="color:#0099FF;font-size:16px;margin-bottom:12px;">Delete Directly Inside the App</h3>
+      <h3 style="color:#0099FF;font-size:16px;margin-bottom:8px;margin-top:0;">Option 1: Instant In-App Account Deletion</h3>
       <ol style="margin-left:18px;line-height:2.2;">
-        <li>Open Echo Life Tracker</li>
-        <li>Go to Profile</li>
-        <li>Select Delete Account</li>
-        <li>Confirm deletion</li>
+        <li>Open Echo: Life Tracker on your Android device.</li>
+        <li>Navigate to <strong>Profile</strong>.</li>
+        <li>Scroll down and tap <strong>Delete Account</strong>.</li>
+        <li>Confirm your decision.</li>
       </ol>
-      <p style="margin-top:10px;color:#8C9AA6;font-size:13px;">This instantly and permanently deletes your account, tasks, goals, notes, and cloud backups from our servers.</p>
+      <p style="margin-top:10px;color:#8C9AA6;font-size:13px;">This instantly and irrevocably deletes your user profile, tasks, habits, goals, notes, and cloud database records from our servers.</p>
     </div>
 
     <div style="background:#150A0A;border:2px solid #FF4444;border-radius:12px;padding:20px 24px;margin:16px 0;">
-      <h3 style="color:#FF6B6B;font-size:16px;margin-bottom:12px;">Email Deletion Request</h3>
-      <p>If you cannot access the app, you can request full data erasure by sending an email to:</p>
+      <h3 style="color:#FF6B6B;font-size:16px;margin-bottom:8px;margin-top:0;">Option 2: Email Deletion Request</h3>
+      <p>If you no longer have access to the app or device, you can request full account and data erasure by emailing us:</p>
       <a href="mailto:echolifetracker@gmail.com?subject=Account%20Deletion%20Request" style="display:inline-block;margin-top:10px;padding:12px 22px;background:#FF4444;color:#fff;border-radius:8px;text-decoration:none;font-weight:700;font-size:14px;">echolifetracker@gmail.com</a>
-      <p style="margin-top:14px;color:#8C9AA6;font-size:13px;">Please mention your registered email address. We verify and complete account deletion requests within 30 days.</p>
+      <p style="margin-top:12px;color:#8C9AA6;font-size:13px;">Please specify your registered account email. All requests are verified and permanently fulfilled within 30 days.</p>
     </div>
 
-    <p style="margin-top:12px;color:#8C9AA6;font-size:13px;">Account deletion is permanent. If you have an active subscription, remember to cancel it separately in Google Play Store under Subscriptions.</p>
-  </section>
-
-  <section>
-    <h2>Children's Privacy</h2>
-    <p>
-      Echo Life Tracker is designed for users aged 13 and older. We do not knowingly collect personal information from children under 13. If you believe a child under 13 has provided personal details, please contact us and we will promptly delete the data.
+    <p style="margin-top:12px;color:#8C9AA6;font-size:13px;">
+      <em>Note: Active Google Play subscriptions must be canceled separately via Google Play Store &gt; Profile &gt; Payments &amp; Subscriptions. Deleting an account does not automatically cancel Google Play recurring billing.</em>
     </p>
   </section>
 
   <section>
-    <h2>Data Security</h2>
+    <h2>10. Target Audience & Age Limitation (18+)</h2>
     <p>
-      We use standard encryption protocols to protect your information. All communication between the app and our database is encrypted in transit using secure HTTPS connections. Database access rules ensure that only you can access your personal data.
+      Echo: Life Tracker is strictly designed and intended for users aged <strong>18 and older (18+)</strong>.
+    </p>
+    <p>
+      In accordance with applicable data protection legislation (including India's Digital Personal Data Protection Act, 2023 and COPPA), we do not knowingly solicit or collect personal data from children or individuals under the age of 18. If we discover that personal information has been collected from an individual under 18 without verified authorization, we will delete that data immediately. If you believe a minor has registered an account, contact us at <code>echolifetracker@gmail.com</code> for immediate removal.
     </p>
   </section>
 
   <section>
-    <h2>Changes to This Policy</h2>
+    <h2>11. Your Rights & Grievance Redressal (DPDP Act, India)</h2>
     <p>
-      We may update this Privacy Policy as our services evolve. Any updates will be published directly on this page with a revised date. Continued use of the app after updates indicates your agreement to the updated policy.
+      Under applicable privacy laws, including the <strong>Digital Personal Data Protection Act (DPDP Act, 2023)</strong> of India, you hold the right to:
     </p>
-  </section>
+    <ul>
+      <li>Access a summary of the personal data processed by us.</li>
+      <li>Correct, update, or complete any inaccurate personal information.</li>
+      <li>Erase and permanently delete your personal data.</li>
+      <li>Nominate another individual in the event of death or incapacity.</li>
+      <li>Seek grievance redressal regarding data privacy concerns.</li>
+    </ul>
 
-  <div class="contact-card">
-    <h2>Contact Us and Grievance Officer</h2>
-    <p>If you have questions about this Privacy Policy, your data, or legal rights under the Digital Personal Data Protection Act, contact:</p>
-    <p style="margin-top:10px; color:#E8EDF2;"><strong>Developer and Grievance Officer:</strong> Aakash Patel</p>
-    <p style="color:#A0AEC0;"><strong>Location:</strong> Lucknow, Uttar Pradesh, India</p>
-    <div style="margin-top:12px;">
-      <a href="mailto:echolifetracker@gmail.com" class="email-link">echolifetracker@gmail.com</a>
+    <div class="contact-card">
+      <h2>Data Protection & Grievance Officer</h2>
+      <p>For any privacy inquiries, grievance redressal, or data erasure requests, please contact:</p>
+      <p style="margin-top:10px; color:#E8EDF2;"><strong>Name:</strong> Aakash Patel</p>
+      <p style="color:#A0AEC0;"><strong>Designation:</strong> Developer & Grievance Officer</p>
+      <p style="color:#A0AEC0;"><strong>Location:</strong> Lucknow, Uttar Pradesh, India</p>
+      <div style="margin-top:14px;">
+        <a href="mailto:echolifetracker@gmail.com" class="email-link">echolifetracker@gmail.com</a>
+      </div>
+      <p style="margin-top:16px; font-size:13px; color:#8C9AA6;">
+        All inquiries and grievance complaints are addressed within 30 days.
+      </p>
     </div>
-    <p style="margin-top:16px; font-size:13px; color:#8C9AA6;">
-      Account deletion can be done directly in the app from Profile or by emailing us. All requests are answered within 30 days.
+  </section>
+
+  <section>
+    <h2>12. Changes to This Privacy Policy</h2>
+    <p>
+      We may periodically update this policy to reflect enhancements in the app or regulatory changes. The revised version will always be published on this page with an updated "Last Updated" date. Continued use of Echo following changes constitutes acceptance of the updated policy.
     </p>
-  </div>
+  </section>
 
   <p class="meta">
-    Copyright 2026 Aakash Patel - Echo Life Tracker - All rights reserved
+    &copy; 2026 Aakash Patel &bull; Echo: Life Tracker &bull; All rights reserved.
   </p>
 
 </main>
 
 <footer>
-  Echo Life Tracker Privacy Policy | Last updated: October 7, 2026
+  Echo Life Tracker Privacy Policy &bull; Last updated: October 7, 2026
 </footer>
 
 </body>
