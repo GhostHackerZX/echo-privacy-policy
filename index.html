@@ -249,14 +249,16 @@
         <strong>Accessibility Service API (<code>android.permission.BIND_ACCESSIBILITY_SERVICE</code>):</strong>
         <br/>Echo: Life Tracker uses Android's AccessibilityService API strictly to support its Focus Lock and digital wellbeing feature during active user-initiated focus sessions.
         <ul>
-          <li><strong>Purpose & Core Functionality:</strong> When a Focus Lock session is active, this service monitors the active foreground package name to temporarily block applications that you have chosen to restrict, taking you back to the Home screen. For YouTube, it detects Shorts and non-educational video playback to keep you on track, and can close the YouTube miniplayer to prevent background distractions.</li>
-          <li><strong>Strict Data Privacy (No Personal Data Collected):</strong> The AccessibilityService API is <strong>NEVER used to collect, read, store, or transmit any personal data, sensitive user content, keystrokes, passwords, chats, messages, or screen text</strong>. It inspects only the foreground package name and YouTube player UI elements in real time. All processing occurs entirely locally on your device.</li>
-          <li><strong>Prominent In-App Disclosure & Consent:</strong> The service is entirely optional. Before redirecting you to Android Accessibility Settings, Echo presents an in-app prominent disclosure explaining exactly why the service is needed and how it functions.</li>
+          <li><strong>Purpose & Foreground App Detection:</strong> When a Focus Lock session is active, the service monitors the active foreground application package name to determine if it is on your user-configured block list. If a blocked app is opened, it executes standard navigation actions (such as <code>GLOBAL_ACTION_HOME</code>) to return you to the home screen.</li>
+          <li><strong>YouTube UI & Content Inspection:</strong> Exclusively within the YouTube application, the service inspects on-screen user interface elements (specifically video player titles, channel names, Shorts tab labels, and miniplayer controls) in real-time. This is used solely to verify whether the playing video belongs to your designated educational channels and to detect Shorts playback.</li>
+          <li><strong>Automated Gesture Dispatch:</strong> The service utilizes gesture dispatch capability (<code>canPerformGestures</code>) solely to perform an automated single-tap on the YouTube small player to reveal and click its close button when the close button is not directly clickable, ensuring unallowed videos do not continue playing in the background.</li>
+          <li><strong>Strict Data Privacy (No Storage or Transmission):</strong> The AccessibilityService API is <strong>NEVER used to read, collect, record, log, store, or transmit any personal data, sensitive user content, private chats, messages, passwords, keystrokes, personal screen text, or browsing history</strong>. All view inspections occur strictly on-device in volatile memory and are discarded immediately.</li>
+          <li><strong>Prominent In-App Disclosure & Consent:</strong> The service is entirely optional. Before directing you to Android Accessibility Settings, Echo presents an in-app prominent disclosure explaining exactly why the service is needed and how it operates.</li>
         </ul>
       </li>
       <li>
         <strong>Usage Access (<code>PACKAGE_USAGE_STATS</code>):</strong>
-        <br/>Used solely to determine the package name of the active foreground application in real-time. Echo checks only whether a user-selected blocked application is running while an active Focus Lock session is in progress.
+        <br/>Used solely to determine the package name of the active foreground application in real-time. Echo checks only whether a user-selected blocked application is running while an active Focus Lock session is in progress. It does not monitor continuous app usage histories or personal device analytics.
       </li>
       <li>
         <strong>Display Over Other Apps (<code>SYSTEM_ALERT_WINDOW</code>):</strong>
@@ -266,32 +268,35 @@
         <strong>Foreground Service (<code>FOREGROUND_SERVICE_SPECIAL_USE</code>):</strong>
         <br/>Category / Subtype: <em>Enforce focus sessions by blocking distracting apps</em>. Used strictly to ensure reliable session timing and active overlay triggering throughout your user-initiated focus window.
       </li>
+      <li>
+        <strong>Kill Background Processes (<code>KILL_BACKGROUND_PROCESSES</code>):</strong>
+        <br/>Used solely to terminate the background process of blocked apps and YouTube when you navigate away, preventing media audio from continuing to play in the background during active focus time.
+      </li>
     </ul>
 
     <div class="highlight-green">
       <strong>Accessibility Service Transparency:</strong>
-      <br/>Echo: Life Tracker uses the AccessibilityService API strictly for user-enabled app blocking and distraction prevention during Focus Lock sessions. It does not collect, record, store, or share any personal user data or on-screen content.
+      <br/>Echo: Life Tracker uses the AccessibilityService API strictly for user-enabled app blocking and distraction prevention during Focus Lock sessions. It does not collect, record, store, or share any personal user data, private communications, or personal screen content.
     </div>
 
     <ul>
-      <li><strong>No Content Inspection:</strong> Focus Lock never reads, records, or transmits screen content, text, keystrokes, personal messages, web history, or account credentials.</li>
-      <li><strong>Local Operation:</strong> Foreground app evaluation runs entirely locally on your device in real-time; no log of your app activity is transmitted to or stored on our servers.</li>
-      <li><strong>Full User Control:</strong> Focus Lock is completely optional. You can grant, deny, or revoke these permissions at any time via Android System Settings without affecting core task or note-taking features.</li>
+      <li><strong>No Private Data Inspection:</strong> Focus Lock never reads, records, or transmits keystrokes, personal messages, private communications, account credentials, or content outside YouTube focus enforcement.</li>
+      <li><strong>Strictly Local Operation:</strong> All evaluations run entirely locally on your device in real-time; no screen content or activity logs are transmitted to or stored on our servers.</li>
+      <li><strong>Full User Control:</strong> Focus Lock is completely optional. You can grant, deny, or revoke any permission at any time via Android System Settings without affecting core task, habit, or note-taking features.</li>
     </ul>
   </section>
 
   <section>
-    <h2>4. Exact Alarm Permission (SCHEDULE_EXACT_ALARM / USE_EXACT_ALARM)</h2>
+    <h2>4. Exact Alarm & Full-Screen Intent Permissions (SCHEDULE_EXACT_ALARM / USE_FULL_SCREEN_INTENT)</h2>
     <p>
-      Echo utilizes Android's exact alarm permissions strictly for user-configured productivity schedules:
+      Echo utilizes Android's exact alarm and full-screen intent permissions strictly for user-configured productivity schedules:
     </p>
     <ul>
-      <li>Triggering deadline notifications at the specific date and time selected by you.</li>
-      <li>Sounding critical alarms for recurring daily/weekly goals.</li>
-      <li>Accurately starting and ending user-scheduled Focus Lock windows.</li>
+      <li><strong>Exact Alarms (<code>SCHEDULE_EXACT_ALARM</code>):</strong> Triggering deadline notifications and sounding critical alarms at the exact date and minute chosen by you, and accurately starting and ending user-scheduled Focus Lock windows.</li>
+      <li><strong>Full-Screen Intent (<code>USE_FULL_SCREEN_INTENT</code>):</strong> Displaying the high-priority reminder alert screen over the lock screen when a critical scheduled reminder or alarm triggers while your device screen is locked or turned off.</li>
     </ul>
     <p>
-      This permission is not used for promotional messages, background tracking, or advertising.
+      These permissions are not used for promotional messages, background tracking, or advertising.
     </p>
   </section>
 
