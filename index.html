@@ -207,7 +207,7 @@
     </p>
     <p>
       <strong>Effective Date:</strong> October 7, 2026 &nbsp;|&nbsp;
-      <strong>Last Updated:</strong> October 7, 2026
+      <strong>Last Updated:</strong> October 13, 2026
     </p>
   </section>
 
@@ -246,6 +246,15 @@
 
     <ul>
       <li>
+        <strong>Accessibility Service API (<code>android.permission.BIND_ACCESSIBILITY_SERVICE</code>):</strong>
+        <br/>Echo: Life Tracker uses Android's AccessibilityService API strictly to support its Focus Lock and digital wellbeing feature during active user-initiated focus sessions.
+        <ul>
+          <li><strong>Purpose & Core Functionality:</strong> When a Focus Lock session is active, this service monitors the active foreground package name to temporarily block applications that you have chosen to restrict, taking you back to the Home screen. For YouTube, it detects Shorts and non-educational video playback to keep you on track, and can close the YouTube miniplayer to prevent background distractions.</li>
+          <li><strong>Strict Data Privacy (No Personal Data Collected):</strong> The AccessibilityService API is <strong>NEVER used to collect, read, store, or transmit any personal data, sensitive user content, keystrokes, passwords, chats, messages, or screen text</strong>. It inspects only the foreground package name and YouTube player UI elements in real time. All processing occurs entirely locally on your device.</li>
+          <li><strong>Prominent In-App Disclosure & Consent:</strong> The service is entirely optional. Before redirecting you to Android Accessibility Settings, Echo presents an in-app prominent disclosure explaining exactly why the service is needed and how it functions.</li>
+        </ul>
+      </li>
+      <li>
         <strong>Usage Access (<code>PACKAGE_USAGE_STATS</code>):</strong>
         <br/>Used solely to determine the package name of the active foreground application in real-time. Echo checks only whether a user-selected blocked application is running while an active Focus Lock session is in progress.
       </li>
@@ -260,8 +269,8 @@
     </ul>
 
     <div class="highlight-green">
-      <strong>Explicit Clarification on Accessibility Service:</strong>
-      <br/>Echo: Life Tracker <strong>DOES NOT use the Android Accessibility Service API (<code>AccessibilityService</code>)</strong>. Focus Lock relies strictly on standard Android UsageStatsManager and System Alert Window.
+      <strong>Accessibility Service Transparency:</strong>
+      <br/>Echo: Life Tracker uses the AccessibilityService API strictly for user-enabled app blocking and distraction prevention during Focus Lock sessions. It does not collect, record, store, or share any personal user data or on-screen content.
     </div>
 
     <ul>
